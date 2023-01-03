@@ -1,10 +1,10 @@
 name: berryd
-description: Flutter UI package, berry design
+description: Berry Design, Flutter UI package
 version: 0.0.1
-homepage:
+homepage: https://memostack.tistory.com/
 
 environment:
-  sdk: '>=3.0.0-76.0.dev <4.0.0'
+  sdk: '>=2.12.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
