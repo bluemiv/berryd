@@ -64,20 +64,55 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: BdButton(
-        child: Text(BdSpace.md.toString()),
+      body: Padding(
+        padding: EdgeInsets.all(BdSpace.sm),
+        child: Wrap(
+          direction: Axis.vertical,
+          spacing: BdSpace.sm,
+          children: [
+            BdButton(
+              backgroundColor: BdBlack.color,
+              onTap: () {
+                print("clicked default button!");
+              },
+              child: Text(
+                "Default button",
+                style: TextStyle(color: Colors.white, fontSize: BdFontSize.md),
+              ),
+            ),
+            BdPrimaryButton(
+              label: "Primary button",
+              onTap: () {
+                print("clicked primary button!");
+              },
+            ),
+            BdSecondaryButton(
+              label: "Secondary button",
+              onTap: () {
+                print("clicked secondary button!");
+              },
+            ),
+            BdLinkButton(
+              label: "Link button",
+              onTap: () {
+                print("clicked link button!");
+              },
+            ),
+            BdGradientButton(
+              child: Text(
+                "Gradient button",
+                style: TextStyle(color: Colors.white, fontSize: BdFontSize.md),
+              ),
+              onTap: () {
+                print("clicked gradient button!");
+              },
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
