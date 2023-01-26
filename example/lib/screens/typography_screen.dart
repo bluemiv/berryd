@@ -17,7 +17,8 @@ class TypographyScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: const [
-          BdText("default text"),
+          BdText("Default text"),
+          BdBoldText("Bold text"),
         ],
       ),
     );
