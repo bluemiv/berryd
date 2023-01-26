@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class BdSpace {
   static double sm = 14.0;
-  static double md = 18.0;
-  static double lg = 24.0;
+  static double md = 24.0;
+  static double lg = 36.0;
 }
 
 class BdFontSize {

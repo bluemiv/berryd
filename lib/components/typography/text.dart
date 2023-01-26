@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 
 class BdText extends StatelessWidget {
   const BdText(this.text,
-      {Key? key, this.size, this.color, this.weight, this.shadows})
+      {Key? key,
+      this.size,
+      this.color,
+      this.weight,
+      this.shadows,
+      this.fontFamily})
       : super(key: key);
 
   final String text;
@@ -11,6 +16,7 @@ class BdText extends StatelessWidget {
   final Color? color;
   final FontWeight? weight;
   final List<Shadow>? shadows;
+  final String? fontFamily;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +27,7 @@ class BdText extends StatelessWidget {
         color: color ?? BdBlack.darkColor,
         fontWeight: weight ?? FontWeight.normal,
         shadows: shadows,
+        fontFamily: fontFamily,
       ),
     );
   }

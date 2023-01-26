@@ -11,12 +11,14 @@ class BdPrimaryButton extends StatelessWidget {
     this.width,
     this.height,
     this.radius,
+    this.bold,
   }) : super(key: key);
 
   final String label;
   final Function onTap;
   final EdgeInsetsGeometry? padding, margin;
   final double? width, height, radius;
+  final bool? bold;
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +29,15 @@ class BdPrimaryButton extends StatelessWidget {
       width: width,
       height: height,
       radius: radius,
-      child: Text(
-        label,
-        style: const TextStyle(color: Colors.white),
-      ),
+      child: bold == true
+          ? BdBoldText(
+              label,
+              color: Colors.white,
+            )
+          : BdText(
+              label,
+              color: Colors.white,
+            ),
     );
   }
 }
