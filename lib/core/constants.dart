@@ -1,5 +1,3 @@
-
-
 class BdSpace {
   static double sm = 14.0;
   static double md = 24.0;
@@ -7,9 +5,9 @@ class BdSpace {
 }
 
 class BdFontSize {
-  static double sm = 10.0;
+  static double sm = 11.0;
   static double md = 14.0;
-  static double lg = 18.0;
+  static double lg = 20.0;
 }
 
 class BdRadius {

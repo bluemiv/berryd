@@ -27,7 +27,7 @@ class BdGradientButton extends StatelessWidget {
     final innerMargin = margin ?? EdgeInsets.zero;
     final innerPadding = padding ?? EdgeInsets.all(BdSpace.sm);
     final innerBackgroundColorList =
-        backgroundColorList ?? [BdColor.primaryLight, BdColor.secondaryLight];
+        backgroundColorList ?? [BdColor.primaryLight, BdColor.primaryDark];
 
     return Container(
       margin: innerMargin,

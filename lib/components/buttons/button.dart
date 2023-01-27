@@ -26,7 +26,7 @@ class BdButton extends StatelessWidget {
     final borderRadius = BorderRadius.circular(radius ?? BdRadius.md);
     final innerMargin = margin ?? EdgeInsets.zero;
     final innerPadding = padding ?? EdgeInsets.all(BdSpace.sm);
-    final innerBackgroundColor = backgroundColor ?? BdColor.primary;
+    final innerBackgroundColor = backgroundColor ?? Colors.transparent;
 
     return Container(
       margin: innerMargin,
@@ -42,7 +42,7 @@ class BdButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: innerBackgroundColor,
                   borderRadius: borderRadius,
-                  boxShadow: backgroundColor == Colors.transparent
+                  boxShadow: innerBackgroundColor == Colors.transparent
                       ? null
                       : [
                           BoxShadow(

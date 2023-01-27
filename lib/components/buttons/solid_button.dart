@@ -1,8 +1,8 @@
 import 'package:berryd/berryd.dart';
 import 'package:flutter/material.dart';
 
-class BdSecondaryButton extends StatelessWidget {
-  const BdSecondaryButton({
+class BdSolidButton extends StatelessWidget {
+  const BdSolidButton({
     Key? key,
     required this.label,
     required this.onTap,
@@ -11,14 +11,14 @@ class BdSecondaryButton extends StatelessWidget {
     this.width,
     this.height,
     this.radius,
-    this.bold,
+    this.thin,
   }) : super(key: key);
 
   final String label;
   final Function onTap;
   final EdgeInsetsGeometry? padding, margin;
   final double? width, height, radius;
-  final bool? bold;
+  final bool? thin;
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +29,13 @@ class BdSecondaryButton extends StatelessWidget {
       width: width,
       height: height,
       radius: radius,
-      backgroundColor: BdColor.secondaryLight,
-      child: bold == true
-          ? BdBoldText(
+      backgroundColor: BdColor.primary,
+      child: thin == true
+          ? BdText(
               label,
               color: Colors.white,
             )
-          : BdText(
+          : BdBoldText(
               label,
               color: Colors.white,
             ),

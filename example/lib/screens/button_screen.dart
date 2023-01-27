@@ -27,13 +27,13 @@ class ButtonScreen extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: BdFontSize.md),
             ),
           ),
-          BdPrimaryButton(
-            label: "Primary button",
+          BdSolidButton(
+            label: "Solid button",
             onTap: () {
-              print("clicked primary button!");
+              print("clicked solid button!");
             },
           ),
-          BdSecondaryButton(
+          BdLightSolidButton(
             label: "Secondary button",
             onTap: () {
               print("clicked secondary button!");

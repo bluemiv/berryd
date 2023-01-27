@@ -17,13 +17,13 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          BdPrimaryButton(
+          BdSolidButton(
               label: "Buttons",
               onTap: () {
                 Navigator.pushNamed(context, '/button');
               }),
           SizedBox(height: BdSpace.sm),
-          BdPrimaryButton(
+          BdSolidButton(
               label: "Typography",
               onTap: () {
                 Navigator.pushNamed(context, '/typography');
