@@ -1,3 +1,4 @@
+import 'package:berryd/berryd.dart';
 import 'package:berryd/core/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class BdGradientButton extends StatelessWidget {
     final innerMargin = margin ?? EdgeInsets.zero;
     final innerPadding = padding ?? EdgeInsets.all(BdSpace.sm);
     final innerBackgroundColorList =
-        backgroundColorList ?? [BdPrimary.lightColor, BdSecondary.lightColor];
+        backgroundColorList ?? [BdColor.primaryLight, BdColor.secondaryLight];
 
     return Container(
       margin: innerMargin,

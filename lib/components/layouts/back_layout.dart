@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 
 class BdBackLayout extends StatelessWidget {
   const BdBackLayout(
-      {Key? key, required this.child, this.title, this.elevation, this.padding, this.onPressed})
+      {Key? key,
+      required this.child,
+      this.title,
+      this.elevation,
+      this.padding,
+      this.onPressed})
       : super(key: key);
 
   final Widget child;
@@ -18,7 +23,7 @@ class BdBackLayout extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
-          color: BdBlack.darkColor,
+          color: BdColor.blackDark,
           onPressed: () {
             if (onPressed != null) {
               onPressed!();

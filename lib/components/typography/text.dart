@@ -24,7 +24,7 @@ class BdText extends StatelessWidget {
       text,
       style: TextStyle(
         fontSize: size ?? BdFontSize.md,
-        color: color ?? BdBlack.darkColor,
+        color: color ?? BdColor.blackDark,
         fontWeight: weight ?? FontWeight.normal,
         shadows: shadows,
         fontFamily: fontFamily,

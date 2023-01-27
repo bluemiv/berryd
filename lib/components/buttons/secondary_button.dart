@@ -29,7 +29,7 @@ class BdSecondaryButton extends StatelessWidget {
       width: width,
       height: height,
       radius: radius,
-      backgroundColor: BdSecondary.color,
+      backgroundColor: BdColor.secondaryLight,
       child: bold == true
           ? BdBoldText(
               label,

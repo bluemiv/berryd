@@ -18,7 +18,7 @@ class ButtonScreen extends StatelessWidget {
         spacing: BdSpace.sm,
         children: [
           BdButton(
-            backgroundColor: BdBlack.color,
+            backgroundColor: BdColor.black,
             onTap: () {
               print("clicked default button!");
             },

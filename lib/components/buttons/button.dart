@@ -1,3 +1,4 @@
+import 'package:berryd/berryd.dart';
 import 'package:berryd/core/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,7 @@ class BdButton extends StatelessWidget {
     final borderRadius = BorderRadius.circular(radius ?? BdRadius.md);
     final innerMargin = margin ?? EdgeInsets.zero;
     final innerPadding = padding ?? EdgeInsets.all(BdSpace.sm);
-    final innerBackgroundColor = backgroundColor ?? BdPrimary.color;
+    final innerBackgroundColor = backgroundColor ?? BdColor.primary;
 
     return Container(
       margin: innerMargin,
