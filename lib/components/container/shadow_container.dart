@@ -30,8 +30,8 @@ class ShadowContainer extends StatelessWidget {
         boxShadow: boxShadow ??
             <BoxShadow>[
               BoxShadow(
-                offset: const Offset(2, 2),
-                blurRadius: 3,
+                offset: const Offset(3, 3),
+                blurRadius: 2,
                 color: BdColor.blackLight,
               )
             ],

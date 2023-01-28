@@ -29,7 +29,7 @@ class BdLightSolidButton extends StatelessWidget {
       width: width,
       height: height,
       radius: radius,
-      backgroundColor: BdColor.gray,
+      backgroundColor: BdColor.primaryLight,
       child: thin == true
           ? BdText(
               label,

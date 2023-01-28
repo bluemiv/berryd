@@ -17,15 +17,15 @@ class BdColor {
   set basePrimary(Color basePrimary) {
     _basePrimary = basePrimary;
     primaryColors = createMaterialColor(_basePrimary);
-    primaryLight = primaryColors[2];
-    primary = primaryColors[5];
-    primaryDark = primaryColors[9];
+    primaryLight = primaryColors[0];
+    primary = primaryColors[10];
+    primaryDark = primaryColors[15];
   }
 
   static List<Color> primaryColors = createMaterialColor(_basePrimary);
-  static Color primaryLight = primaryColors[2];
-  static Color primary = primaryColors[5];
-  static Color primaryDark = primaryColors[9];
+  static Color primaryLight = primaryColors[0];
+  static Color primary = primaryColors[10];
+  static Color primaryDark = primaryColors[15];
 
   // Black Color
   static Color _baseBlack = const Color(0xff343a40);
@@ -35,33 +35,15 @@ class BdColor {
   set baseBlack(Color baseBlack) {
     _baseBlack = baseBlack;
     blackColors = createMaterialColor(_baseBlack);
-    blackLight = blackColors[2];
-    black = blackColors[5];
-    blackDark = blackColors[9];
+    blackLight = blackColors[0];
+    black = blackColors[10];
+    blackDark = blackColors[15];
   }
 
   static List<Color> blackColors = createMaterialColor(_baseBlack);
-  static Color blackLight = blackColors[2];
-  static Color black = blackColors[5];
-  static Color blackDark = blackColors[9];
-
-  // Gray Color
-  static Color _baseGray = const Color(0xfff2f2f2);
-
-  Color get baseGray => _baseGray;
-
-  set baseGray(Color baseGray) {
-    _baseGray = baseGray;
-    grayColors = createMaterialColor(_baseGray);
-    grayLight = grayColors[2];
-    gray = grayColors[5];
-    grayDark = grayColors[9];
-  }
-
-  static List<Color> grayColors = createMaterialColor(_baseGray);
-  static Color grayLight = grayColors[2];
-  static Color gray = grayColors[5];
-  static Color grayDark = grayColors[9];
+  static Color blackLight = blackColors[0];
+  static Color black = blackColors[10];
+  static Color blackDark = blackColors[15];
 
   // Red Color
   static Color _baseRed = const Color(0xfffa5252);
@@ -71,15 +53,15 @@ class BdColor {
   set baseRed(Color baseRed) {
     _baseRed = baseRed;
     redColors = createMaterialColor(_baseRed);
-    redLight = redColors[2];
-    red = redColors[5];
-    redDark = redColors[9];
+    redLight = redColors[0];
+    red = redColors[10];
+    redDark = redColors[15];
   }
 
   static List<Color> redColors = createMaterialColor(_baseRed);
-  static Color redLight = redColors[2];
-  static Color red = redColors[5];
-  static Color redDark = redColors[9];
+  static Color redLight = redColors[0];
+  static Color red = redColors[10];
+  static Color redDark = redColors[15];
 
   // Green Color
   static Color _baseGreen = const Color(0xff40c057);
@@ -89,15 +71,15 @@ class BdColor {
   set baseGreen(Color baseGreen) {
     _baseGreen = baseGreen;
     greenColors = createMaterialColor(_baseGreen);
-    greenLight = greenColors[2];
-    green = greenColors[5];
-    greenDark = greenColors[9];
+    greenLight = greenColors[0];
+    green = greenColors[10];
+    greenDark = greenColors[15];
   }
 
   static List<Color> greenColors = createMaterialColor(_baseGreen);
-  static Color greenLight = greenColors[2];
-  static Color green = greenColors[5];
-  static Color greenDark = greenColors[9];
+  static Color greenLight = greenColors[0];
+  static Color green = greenColors[10];
+  static Color greenDark = greenColors[15];
 
   // Orange Color
   static Color _baseOrange = const Color(0xffff922b);
@@ -107,27 +89,27 @@ class BdColor {
   set baseOrange(Color baseOrange) {
     _baseOrange = baseOrange;
     orangeColors = createMaterialColor(_baseOrange);
-    orangeLight = orangeColors[2];
-    orange = orangeColors[5];
-    orangeDark = orangeColors[9];
+    orangeLight = orangeColors[0];
+    orange = orangeColors[10];
+    orangeDark = orangeColors[15];
   }
 
   static List<Color> orangeColors = createMaterialColor(_baseOrange);
-  static Color orangeLight = orangeColors[2];
-  static Color orange = orangeColors[5];
-  static Color orangeDark = orangeColors[9];
+  static Color orangeLight = orangeColors[0];
+  static Color orange = orangeColors[10];
+  static Color orangeDark = orangeColors[15];
 
   static List<Color> createMaterialColor(Color color) {
     List strengths = <double>[.05];
     List<Color> colorList = [];
     final int r = color.red, g = color.green, b = color.blue;
 
-    for (int i = 1; i < 10; i++) {
+    for (int i = 1; i < 16; i++) {
       strengths.add(0.1 * i);
     }
 
     for (final strength in strengths) {
-      final double ds = 0.5 - strength;
+      final double ds = 1.0 - strength;
       colorList.add(Color.fromRGBO(
         r + ((ds < 0 ? r : (255 - r)) * ds).round(),
         g + ((ds < 0 ? g : (255 - g)) * ds).round(),
