@@ -5,8 +5,8 @@ class BdSpace {
 }
 
 class BdFontSize {
-  static double sm = 11.0;
-  static double md = 14.0;
+  static double sm = 13.0;
+  static double md = 16.0;
   static double lg = 20.0;
 }
 

@@ -1,9 +1,9 @@
 library berryd;
 
 export 'components/buttons/button.dart';
-export 'components/buttons/gradient_button.dart';
 export 'components/buttons/light_solid_button.dart';
 export 'components/buttons/link_button.dart';
+export 'components/buttons/menu_button.dart';
 export 'components/buttons/solid_button.dart';
 export 'components/container/shadow_container.dart';
 export 'components/layouts/back_layout.dart';

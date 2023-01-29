@@ -45,15 +45,6 @@ class ButtonScreen extends StatelessWidget {
               print("clicked link button!");
             },
           ),
-          BdGradientButton(
-            child: Text(
-              "Gradient button",
-              style: TextStyle(color: Colors.white, fontSize: BdFontSize.md),
-            ),
-            onTap: () {
-              print("clicked gradient button!");
-            },
-          ),
         ],
       ),
     );
