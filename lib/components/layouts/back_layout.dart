@@ -2,17 +2,18 @@ import 'package:berryd/berryd.dart';
 import 'package:flutter/material.dart';
 
 class BdBackLayout extends StatelessWidget {
-  const BdBackLayout(
-      {Key? key,
-      required this.child,
-      this.title,
-      this.elevation,
-      this.padding,
-      this.onPressed})
-      : super(key: key);
+  const BdBackLayout({
+    Key? key,
+    required this.child,
+    this.title,
+    this.elevation,
+    this.padding,
+    this.onPressed,
+    this.bottomBannerContainer,
+  }) : super(key: key);
 
   final Widget child;
-  final Widget? title;
+  final Widget? title, bottomBannerContainer;
   final double? elevation;
   final EdgeInsets? padding;
   final Function? onPressed;
@@ -37,6 +38,7 @@ class BdBackLayout extends StatelessWidget {
         backgroundColor: Colors.transparent,
       ),
       padding: padding,
+      bottomBannerContainer: bottomBannerContainer,
       child: child,
     );
   }

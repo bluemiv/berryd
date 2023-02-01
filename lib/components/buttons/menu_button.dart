@@ -7,6 +7,8 @@ class MenuButton extends StatelessWidget {
     required this.title,
     required this.desc,
     required this.onTap,
+    this.width,
+    this.height,
     this.imageWidget,
     this.backgroundColor,
     this.textColor,
@@ -16,14 +18,16 @@ class MenuButton extends StatelessWidget {
   final Widget? imageWidget;
   final Function onTap;
   final Color? backgroundColor, textColor;
+  final double? width, height;
 
   @override
   Widget build(BuildContext context) {
     return BdButton(
+      width: width ?? double.infinity,
+      height: height,
       backgroundColor: backgroundColor ?? BdColor.blackLight,
       onTap: onTap,
       child: SizedBox(
-        width: double.infinity,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
