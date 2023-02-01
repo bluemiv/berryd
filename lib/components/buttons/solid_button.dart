@@ -1,8 +1,8 @@
 import 'package:berryd/berryd.dart';
 import 'package:flutter/material.dart';
 
-class BdPrimaryButton extends StatelessWidget {
-  const BdPrimaryButton({
+class BdSolidButton extends StatelessWidget {
+  const BdSolidButton({
     Key? key,
     required this.label,
     required this.onTap,
@@ -11,12 +11,14 @@ class BdPrimaryButton extends StatelessWidget {
     this.width,
     this.height,
     this.radius,
+    this.thin,
   }) : super(key: key);
 
   final String label;
   final Function onTap;
   final EdgeInsetsGeometry? padding, margin;
   final double? width, height, radius;
+  final bool? thin;
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +29,16 @@ class BdPrimaryButton extends StatelessWidget {
       width: width,
       height: height,
       radius: radius,
-      child: Text(
-        label,
-        style: const TextStyle(color: Colors.white),
-      ),
+      backgroundColor: BdColor.primary,
+      child: thin == true
+          ? BdText(
+              label,
+              color: Colors.white,
+            )
+          : BdBoldText(
+              label,
+              color: Colors.white,
+            ),
     );
   }
 }

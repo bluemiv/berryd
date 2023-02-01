@@ -18,7 +18,7 @@ class ButtonScreen extends StatelessWidget {
         spacing: BdSpace.sm,
         children: [
           BdButton(
-            backgroundColor: BdBlack.color,
+            backgroundColor: BdColor.black,
             onTap: () {
               print("clicked default button!");
             },
@@ -27,13 +27,13 @@ class ButtonScreen extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: BdFontSize.md),
             ),
           ),
-          BdPrimaryButton(
-            label: "Primary button",
+          BdSolidButton(
+            label: "Solid button",
             onTap: () {
-              print("clicked primary button!");
+              print("clicked solid button!");
             },
           ),
-          BdSecondaryButton(
+          BdLightSolidButton(
             label: "Secondary button",
             onTap: () {
               print("clicked secondary button!");
@@ -43,15 +43,6 @@ class ButtonScreen extends StatelessWidget {
             label: "Link button",
             onTap: () {
               print("clicked link button!");
-            },
-          ),
-          BdGradientButton(
-            child: Text(
-              "Gradient button",
-              style: TextStyle(color: Colors.white, fontSize: BdFontSize.md),
-            ),
-            onTap: () {
-              print("clicked gradient button!");
             },
           ),
         ],

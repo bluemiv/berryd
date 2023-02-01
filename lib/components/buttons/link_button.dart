@@ -30,7 +30,7 @@ class BdLinkButton extends StatelessWidget {
       backgroundColor: Colors.transparent,
       child: Text(
         label,
-        style: TextStyle(color: BdPrimary.color),
+        style: TextStyle(color: BdColor.primary),
       ),
     );
   }
