@@ -5,7 +5,7 @@ class MenuButton extends StatelessWidget {
   const MenuButton({
     Key? key,
     required this.title,
-    required this.desc,
+    required this.descList,
     required this.onTap,
     this.width,
     this.height,
@@ -14,7 +14,8 @@ class MenuButton extends StatelessWidget {
     this.textColor,
   }) : super(key: key);
 
-  final String title, desc;
+  final String title;
+  final List<String> descList;
   final Widget? imageWidget;
   final Function onTap;
   final Color? backgroundColor, textColor;
@@ -39,10 +40,20 @@ class MenuButton extends StatelessWidget {
                   color: textColor ?? BdColor.blackDark,
                 ),
                 SizedBox(height: BdSpace.sm),
-                BdText(
-                  desc,
-                  size: BdFontSize.sm,
-                  color: textColor ?? BdColor.blackDark,
+                Wrap(
+                  direction: Axis.vertical,
+                  spacing: BdSpace.sm,
+                  children: List.generate(
+                    descList.length,
+                    (index) {
+                      final desc = descList[index];
+                      return BdText(
+                        desc,
+                        size: BdFontSize.sm,
+                        color: textColor ?? BdColor.blackDark,
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
