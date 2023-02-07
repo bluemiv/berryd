@@ -13,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Berry Design',
-      initialRoute: "/",
+      initialRoute: HomeScreen.routeName,
       routes: {
-        "/": (context) => const HomeScreen(),
-        "/button": (context) => const ButtonScreen(),
-        "/typography": (context) => const TypographyScreen()
+        HomeScreen.routeName: (context) => const HomeScreen(),
+        ButtonScreen.routeName: (context) => const ButtonScreen(),
+        TypographyScreen.routeName: (context) => const TypographyScreen()
       },
     );
   }

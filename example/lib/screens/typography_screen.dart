@@ -3,22 +3,21 @@ import 'package:flutter/material.dart';
 
 class TypographyScreen extends StatelessWidget {
   const TypographyScreen({Key? key}) : super(key: key);
+  static const String routeName = "/typography";
 
   @override
   Widget build(BuildContext context) {
-    return BdLayout(
-      appBar: AppBar(
-        title: const BdText(
-          "Typography",
-          color: Colors.white,
-        ),
-      ),
+    return BdBackLayout(
+      title: const BdBoldText("Typography"),
       padding: EdgeInsets.all(BdSpace.sm),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: BdSpaceWrapper(
+        vertical: true,
+        spacing: BdSpace.sm,
         children: const [
           BdText("Default text"),
           BdBoldText("Bold text"),
+          BdBoldText(
+              "Very looooooooooooooooooooooooooooooooooooooooooooooooooooooooooog text"),
         ],
       ),
     );

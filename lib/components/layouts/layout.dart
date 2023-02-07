@@ -22,10 +22,14 @@ class BdLayout extends StatelessWidget {
         child: Stack(
           children: [
             Container(
+              width: double.infinity,
               padding: padding ?? const EdgeInsets.all(0),
               margin: EdgeInsets.only(
                   bottom: bottomBannerContainer != null ? 80 : 0),
-              child: child,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: child,
+              ),
             ),
             if (bottomBannerContainer != null)
               Positioned(
