@@ -9,18 +9,21 @@ class BdBackLayout extends StatelessWidget {
     this.elevation,
     this.padding,
     this.onPressed,
-    this.bottomBannerContainer,
+    this.bottomBanner,
+    this.backgroundColor,
   }) : super(key: key);
 
   final Widget child;
-  final Widget? title, bottomBannerContainer;
+  final Widget? title, bottomBanner;
   final double? elevation;
   final EdgeInsets? padding;
   final Function? onPressed;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return BdLayout(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
@@ -38,7 +41,7 @@ class BdBackLayout extends StatelessWidget {
         backgroundColor: Colors.transparent,
       ),
       padding: padding,
-      bottomBannerContainer: bottomBannerContainer,
+      bottomBanner: bottomBanner,
       child: child,
     );
   }

@@ -13,6 +13,7 @@ class BdButton extends StatelessWidget {
     this.width,
     this.height,
     this.radius,
+    this.boxShadow,
   }) : super(key: key);
 
   final Widget child;
@@ -20,10 +21,11 @@ class BdButton extends StatelessWidget {
   final Color? backgroundColor;
   final EdgeInsetsGeometry? padding, margin;
   final double? width, height, radius;
+  final List<BoxShadow>? boxShadow;
 
   @override
   Widget build(BuildContext context) {
-    final borderRadius = BorderRadius.circular(radius ?? BdRadius.md);
+    final borderRadius = BorderRadius.circular(radius ?? BdRadius.sm);
     final innerMargin = margin ?? EdgeInsets.zero;
     final innerPadding = padding ?? EdgeInsets.all(BdSpace.sm);
     final innerBackgroundColor = backgroundColor ?? Colors.transparent;
@@ -42,16 +44,7 @@ class BdButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: innerBackgroundColor,
                   borderRadius: borderRadius,
-                  boxShadow: innerBackgroundColor == Colors.transparent
-                      ? null
-                      : [
-                          BoxShadow(
-                            color: (innerBackgroundColor).withOpacity(0.5),
-                            spreadRadius: 0,
-                            blurRadius: 3,
-                            offset: const Offset(2, 2),
-                          ),
-                        ],
+                  boxShadow: boxShadow,
                 ),
                 alignment: Alignment.center,
                 child: child,

@@ -14,61 +14,6 @@ class ButtonScreen extends StatelessWidget {
         vertical: true,
         spacing: BdSpace.sm,
         children: [
-          BdSpaceWrapper(
-            vertical: false,
-            spacing: BdSpace.sm,
-            children: [
-              BdSolidButton(
-                label: "Solid",
-                onTap: () {
-                  print("Clicked solid button!");
-                },
-              ),
-              BdSolidButton(
-                label: "Solid thin",
-                thin: true,
-                onTap: () {
-                  print("Clicked solid button!");
-                },
-              ),
-              BdSolidButton(
-                label: "Solid radius lg",
-                radius: BdRadius.lg,
-                onTap: () {
-                  print("Clicked solid button!");
-                },
-              ),
-            ],
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: BdSpaceWrapper(
-              vertical: false,
-              spacing: BdSpace.sm,
-              children: [
-                BdLightSolidButton(
-                  label: "Light solid",
-                  onTap: () {
-                    print("Clicked light solid button!");
-                  },
-                ),
-                BdLightSolidButton(
-                  label: "Light solid thin",
-                  thin: true,
-                  onTap: () {
-                    print("Clicked light solid button!");
-                  },
-                ),
-                BdLightSolidButton(
-                  label: "Light solid radius lg",
-                  radius: BdRadius.lg,
-                  onTap: () {
-                    print("Clicked light solid button!");
-                  },
-                ),
-              ],
-            ),
-          ),
           BdButton(
             backgroundColor: BdColor.black,
             onTap: () {
@@ -78,12 +23,6 @@ class ButtonScreen extends StatelessWidget {
               "Normal button",
               style: TextStyle(color: Colors.white, fontSize: BdFontSize.md),
             ),
-          ),
-          BdLinkButton(
-            label: "Link button",
-            onTap: () {
-              print("clicked link button!");
-            },
           ),
         ],
       ),
