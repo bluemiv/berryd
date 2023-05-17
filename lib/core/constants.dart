@@ -1,4 +1,5 @@
 class BdSpace {
+  static double xs = 8.0;
   static double sm = 14.0;
   static double md = 24.0;
   static double lg = 36.0;
