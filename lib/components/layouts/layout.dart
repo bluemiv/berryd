@@ -24,9 +24,7 @@ class BdLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery
-        .of(context)
-        .size;
+    final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: appBar,
@@ -39,8 +37,8 @@ class BdLayout extends StatelessWidget {
               color: backgroundColor ?? Colors.transparent,
               padding: padding ?? const EdgeInsets.all(0),
               margin: EdgeInsets.only(
-                top: topBanner != null ? topBannerHeight ?? 80 : 0,
-                bottom: bottomBanner != null ? bottomBannerHeight ?? 80 : 0,
+                top: topBanner != null ? topBannerHeight ?? 75 : 0,
+                bottom: bottomBanner != null ? bottomBannerHeight ?? 75 : 0,
               ),
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
@@ -52,7 +50,7 @@ class BdLayout extends StatelessWidget {
                 top: 0,
                 left: 0,
                 child: SizedBox(
-                  height: topBannerHeight ?? 80,
+                  height: topBannerHeight ?? 75,
                   width: size.width,
                   child: topBanner,
                 ),
@@ -62,7 +60,7 @@ class BdLayout extends StatelessWidget {
                 bottom: 0,
                 left: 0,
                 child: SizedBox(
-                  height: bottomBannerHeight ?? 80,
+                  height: bottomBannerHeight ?? 75,
                   width: size.width,
                   child: bottomBanner,
                 ),
